@@ -1,10 +1,16 @@
 # GitHub Traffic Backend
 
-A NestJS-based backend service for tracking and analyzing GitHub repository traffic.
+A NestJS-based backend service for tracking, storing, and analyzing GitHub repository traffic data using MongoDB and the GitHub API via Octokit.
 
 ## Description
 
-This application provides a REST API for storing, processing, and visualizing GitHub repository traffic data.
+This application provides a REST API designed to:
+
+- Fetch repository traffic data (views, clones) from GitHub using the Octokit library.
+- Store this data persistently in a MongoDB database via Mongoose.
+- Expose endpoints for retrieving and potentially processing this data.
+
+This backend serves as the data source for the [GitHub Traffic Frontend](https://github.com/Nikseell/github-traffic-frontend), which visualizes the repository traffic data in charts.
 
 ## Installation
 
@@ -40,7 +46,7 @@ $ npm run test:cov
 
 ## API Documentation
 
-Once the application is running, you can access the Swagger documentation at:
+The API documentation (using Swagger) is available once the application is running:
 
 ```
 http://localhost:3000/api
